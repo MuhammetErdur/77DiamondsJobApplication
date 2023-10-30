@@ -30,8 +30,8 @@ describe('example app', () => {
     // open first product
     cy.get('.btn-primary').first().click({force: true})
 
-    // wait 1 second to call the api
-    cy.wait(1000)
+    // wait 3 second to call the api
+    cy.wait(3000)
 
     // check if opened product id is equal to 1
     cy.url().should('include', '/product-detail/1')

@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/77Diamonds/CypressJobApplication#readme",
   "devDependencies": {
-    "cypress": "^9.2.0"
+    "cypress": "^13.0.0"
   }
 }
