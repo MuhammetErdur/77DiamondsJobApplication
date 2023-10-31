@@ -1,14 +1,15 @@
-import ProductTable from '.support/ProductTable/';
-import ProductDetails from '.support/ProductDetails/';
-import PopUp from '.addImagePopup';
+import productTable from './cypress\support\PageObjects\productTable.js';
+import ProductDetails from './cypress\support\PageObjects\ProductDetails.js';
+import addImagePopUp from './cypress\support\PageObjects\addImagePopup.js';
 
 describe("Uploading/Removing Image functuonalities", () => {
 
     beforeEach(() => {
-        cy.visit(baseUrl);
+        cy.visit('/');
     });
 
     it("Should be able to upload an image", () => {
+
         productTable.clickEditImage('Funny');  //Click EditImage button for Funny t-shirt
         ProductDetails.clickAddButtonInCell(2, 3);  //Click Add button for adding new Image
         PopUp.uploadImage(image.png); //Click upload button for uploading new Image
